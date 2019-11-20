@@ -27,27 +27,6 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "linters": {
-      "*.ts": [
-        "prettier --write",
-        "tslint --fix",
-        "git add"
-      ],
-      "*.{json,css,scss,md}": [
-        "prettier --write",
-        "git add"
-      ]
-    },
-    "ignore": [
-      "**/dist/**/*"
-    ]
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^8.2.0",
