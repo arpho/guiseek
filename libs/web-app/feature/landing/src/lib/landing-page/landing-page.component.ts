@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { SeoService } from '@guiseek/shared';
 
 @Component({
   selector: 'web-app-landing-page',
@@ -8,9 +9,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private seoService: SeoService
+  ) { }
 
   ngOnInit() {
+    this.seoService.generateTags({
+      tags: { title: 'Landing' }
+    })
   }
 
 }

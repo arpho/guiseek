@@ -33,8 +33,20 @@
             "stylePreprocessorOptions": {
               "includePaths": ["libs/shared/src/styles/apps/web-app"]
             },
-            "styles": ["apps/web-app/src/styles.scss"],
-            "scripts": []
+            "styles": [
+              "apps/web-app/src/styles.scss",
+              "libs/shared/src/assets/fontawesome/css/fontawesome-all.min.css"
+            ],
+            "scripts": [
+              "libs/shared/src/assets/apps/web-app/js/classie.js",
+              "libs/shared/src/assets/apps/web-app/js/jquery.min.js",
+              "libs/shared/src/assets/apps/web-app/js/jquery.scrollex.min.js",
+              "libs/shared/src/assets/apps/web-app/js/jquery.scrolly.min.js",
+              "libs/shared/src/assets/apps/web-app/js/browser.min.js",
+              "libs/shared/src/assets/apps/web-app/js/breakpoints.min.js",
+              "libs/shared/src/assets/apps/web-app/js/util.js",
+              "libs/shared/src/assets/apps/web-app/js/main.js"
+            ]
           },
           "configurations": {
             "production": {

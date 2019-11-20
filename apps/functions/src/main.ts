@@ -3,16 +3,12 @@
 import 'zone.js/dist/zone-node';
 
 import { enableProdMode } from '@angular/core';
-// import { bootstrap } from '@guiseek/backend/express';
 import * as express from 'express';
 import * as functions from 'firebase-functions';
 const { renderModuleFactory } = require('@angular/platform-server');
 const path = require('path');
 
-const {
-  AppServerModuleNgFactory,
-  // LAZY_MODULE_MAP
-} = require('../../../dist/apps/web-app/server/main');
+const { AppServerModuleNgFactory } = require('../../../dist/apps/web-app/server/main');
 
 enableProdMode();
 
@@ -30,18 +26,3 @@ app.get('**', function (req, res) {
 });
 
 exports.server = functions.https.onRequest(app);
-
-
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   response.send('Hello from Firebase!');
-// });
-
-
-// import * as functions from 'firebase-functions';
-// const universal = require(`${process.cwd()}/dist/apps/webapp/server/main`);
-// const universal = require('../../../dist/apps/web-app/server/main');
-
-// export const server = functions.https.onRequest(bootstrap);

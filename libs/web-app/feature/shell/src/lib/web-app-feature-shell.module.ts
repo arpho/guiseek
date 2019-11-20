@@ -21,6 +21,7 @@ import { ShellComponent } from './shell/shell.component';
           },
           {
             path: '',
+            // pathMatch: 'full',
             redirectTo: 'landing'
           }
         ]

@@ -2,11 +2,11 @@
   <div class="inner">
     <nav>
       <ul>
-        <li><a routerLink="/" fragment="intro">Intro</a></li>
-        <li><a routerLink="/">Quem sou eu</a></li>
-        <li><a routerLink="/">Who we are</a></li>
+        <li><a routerLink="/landing" fragment="intro">Intro</a></li>
+        <li><a routerLink="/landing" fragment="origens" [preserveFragment]="true">Origens</a></li>
+        <li><a routerLink="/landing/open-source">Código Livre</a></li>
         <li><a routerLink="/">What we do</a></li>
-        <li><a routerLink="/contato">Contato</a></li>
+        <li><a routerLink="/landing/contato">Contato</a></li>
       </ul>
     </nav>
   </div>

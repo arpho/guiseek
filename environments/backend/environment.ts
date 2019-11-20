@@ -5,7 +5,7 @@ require('dotenv').config();
 
 export const environment = {
   production: false,
-  mongoUri: process.env.MONGO_URI || 'mongodb://localhost/nx-mean-starter',
+  mongoUri: process.env.MONGO_URI || 'mongodb://localhost/guiseek',
   sessionSecret: 'ascva123fsadgt',
   port: 3333,
   firebase: JSON.parse(process.env.FIREBASE_ADMIN),

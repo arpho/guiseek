@@ -1,6 +1,6 @@
 import { environment } from '@env/backend';
 import * as errorHandler from 'errorhandler';
-import { Express, static as expressStatic } from 'express';
+import { Express } from 'express';
 
 export class AppConfig {
   constructor(private app: Express) { }
