@@ -13,11 +13,15 @@ import { ShellComponent } from './shell/shell.component';
         component: ShellComponent,
         children: [
           {
-            path: '',
+            path: 'landing',
             loadChildren: () =>
               import('@guiseek/web-app/feature/landing').then(
                 module => module.WebAppFeatureLandingModule,
               ),
+          },
+          {
+            path: '',
+            redirectTo: 'landing'
           }
         ]
       },
