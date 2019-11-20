@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "gui-seek"
+    "default": "guiseek"
+  },
+  "targets": {
+    "gui-seek": {
+      "hosting": {
+        "guiseek": [
+          "guiseek"
+        ]
+      }
+    }
   }
 }

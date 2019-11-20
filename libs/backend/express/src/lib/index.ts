@@ -1,10 +1,13 @@
+(global as any).WebSocket = require('ws');
+(global as any).XMLHttpRequest = require('xhr2');
+
 import { environment } from '@env/backend';
 import { hostWebApp, hostWebAppSsr } from '@guiseek/backend/hosting';
 import * as express from 'express';
 import { AppConfig } from './config';
 
 
-export const app = express();
+const app = express();
 
 new AppConfig(app).make();
 // new AppControllers(app).make();
@@ -13,6 +16,8 @@ new AppConfig(app).make();
 // hostWebApp(app);
 hostWebAppSsr(app);
 // }
+
+export { app };
 
 export function bootstrap() {
   return app.listen(environment.port, () => {

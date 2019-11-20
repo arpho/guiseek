@@ -28,6 +28,15 @@
     },
     "backend-core": {
       "tags": []
+    },
+    "shared": {
+      "tags": []
+    },
+    "web-app-feature-shell": {
+      "tags": []
+    },
+    "web-app-feature-landing": {
+      "tags": []
     }
   }
 }

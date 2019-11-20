@@ -21,7 +21,18 @@
             "polyfills": "apps/web-app/src/polyfills.ts",
             "tsConfig": "apps/web-app/tsconfig.app.json",
             "aot": false,
-            "assets": ["apps/web-app/src/favicon.ico", "apps/web-app/src/assets"],
+            "assets": [
+              "apps/web-app/src/favicon.ico",
+              "apps/web-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./libs/shared/src/assets/apps/web-app/",
+                "output": "./assets"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/shared/src/styles/apps/web-app"]
+            },
             "styles": ["apps/web-app/src/styles.scss"],
             "scripts": []
           },
@@ -95,7 +106,12 @@
           "options": {
             "outputPath": "dist/apps/web-app/server",
             "main": "apps/web-app/src/main.server.ts",
-            "tsConfig": "apps/web-app/tsconfig.server.json"
+            "tsConfig": "apps/web-app/tsconfig.server.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/shared/src/styles/apps/web-app"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -316,6 +332,96 @@
             "jestConfig": "libs/backend/core/jest.config.js",
             "tsConfig": "libs/backend/core/tsconfig.spec.json"
           }
+        }
+      }
+    },
+    "shared": {
+      "projectType": "library",
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "prefix": "guiseek",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/shared/tsconfig.lib.json", "libs/shared/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/shared/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "tsConfig": "libs/shared/tsconfig.spec.json",
+            "setupFile": "libs/shared/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "web-app-feature-shell": {
+      "projectType": "library",
+      "root": "libs/web-app/feature/shell",
+      "sourceRoot": "libs/web-app/feature/shell/src",
+      "prefix": "guiseek",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/web-app/feature/shell/tsconfig.lib.json",
+              "libs/web-app/feature/shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/web-app/feature/shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web-app/feature/shell/jest.config.js",
+            "tsConfig": "libs/web-app/feature/shell/tsconfig.spec.json",
+            "setupFile": "libs/web-app/feature/shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "web-app-feature-landing": {
+      "projectType": "library",
+      "root": "libs/web-app/feature/landing",
+      "sourceRoot": "libs/web-app/feature/landing/src",
+      "prefix": "guiseek",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/web-app/feature/landing/tsconfig.lib.json",
+              "libs/web-app/feature/landing/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/web-app/feature/landing/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web-app/feature/landing/jest.config.js",
+            "tsConfig": "libs/web-app/feature/landing/tsconfig.spec.json",
+            "setupFile": "libs/web-app/feature/landing/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }
