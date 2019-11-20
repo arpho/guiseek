@@ -15,7 +15,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@env/frontend": ["environments/frontend/environment.ts"],
+      "@env/backend": ["environments/backend/environment.ts"],
+      "@guiseek/backend/hosting": ["libs/backend/hosting/src/index.ts"],
+      "@guiseek/backend/express": ["libs/backend/express/src/index.ts"],
+      "@guiseek/backend/core": ["libs/backend/core/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -13,6 +13,21 @@
     },
     "web-app": {
       "tags": []
+    },
+    "functions": {
+      "tags": []
+    },
+    "backend-hosting": {
+      "tags": []
+    },
+    "backend-express": {
+      "tags": []
+    },
+    "server": {
+      "tags": []
+    },
+    "backend-core": {
+      "tags": []
     }
   }
 }

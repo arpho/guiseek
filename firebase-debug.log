@@ -1,0 +1,53 @@
+[debug] [2019-11-20T09:02:25.165Z] ----------------------------------------------------------------------
+[debug] [2019-11-20T09:02:25.167Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2019-11-20T09:02:25.167Z] CLI Version:   7.7.0
+[debug] [2019-11-20T09:02:25.167Z] Platform:      darwin
+[debug] [2019-11-20T09:02:25.167Z] Node Version:  v10.13.0
+[debug] [2019-11-20T09:02:25.173Z] Time:          Wed Nov 20 2019 07:02:25 GMT-0200 (GMT-02:00)
+[debug] [2019-11-20T09:02:25.173Z] ----------------------------------------------------------------------
+[debug] [2019-11-20T09:02:25.173Z] 
+[debug] [2019-11-20T09:02:25.181Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-20T09:02:25.182Z] > authorizing via signed-in user
+[debug] [2019-11-20T09:02:25.182Z] [iam] checking project gui-seek for permissions ["firebase.projects.get"]
+[debug] [2019-11-20T09:02:25.184Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-11-20T09:02:25.184Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-11-20T09:02:25.478Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-20T09:02:25.489Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/gui-seek:testIamPermissions  
+
+[debug] [2019-11-20T09:02:26.578Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-20T09:02:26.579Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/gui-seek  
+ 
+[debug] [2019-11-20T09:02:27.917Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: Using node@10 from host.
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/guiseek/guiseek/guiseek/" for Cloud Functions...
+[debug] [2019-11-20T09:02:28.213Z] [worker-~diagnostic~-c01b98b9-b329-4a21-9504-fc0d321449e7]: BUSY
+[debug] [2019-11-20T09:02:28.603Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/guiseek/guiseek/guiseek","node_version":"10.13.0"}
+[debug] [2019-11-20T09:02:28.606Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-20T09:02:28.610Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/Users/guiseek/guiseek/guiseek/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-20T09:02:28.610Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/guiseek/guiseek/guiseek/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-20T09:02:28.611Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/guiseek/guiseek/guiseek/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[helloWorld]: http function initialized (http://localhost:5000/gui-seek/us-central1/helloWorld).
+[debug] [2019-11-20T09:02:28.745Z] [worker-~diagnostic~-c01b98b9-b329-4a21-9504-fc0d321449e7]: exited
+[debug] [2019-11-20T09:02:28.745Z] [worker-~diagnostic~-c01b98b9-b329-4a21-9504-fc0d321449e7]: FINISHED
+[debug] [2019-11-20T09:02:40.313Z] Accepted request GET /gui-seek/us-central1/helloWorld --> helloWorld
+[debug] [2019-11-20T09:02:40.327Z] [worker-helloWorld-b6a335e6-2e9b-49ab-b3fb-510ee7466f2a]: BUSY
+[debug] [2019-11-20T09:02:40.720Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/guiseek/guiseek/guiseek","node_version":"10.13.0"}
+[debug] [2019-11-20T09:02:40.723Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-20T09:02:40.726Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/Users/guiseek/guiseek/guiseek/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-20T09:02:40.727Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/guiseek/guiseek/guiseek/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-20T09:02:40.729Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/guiseek/guiseek/guiseek/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-20T09:02:40.790Z] [runtime-status] Trigger "helloWorld" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "helloWorld"
+[debug] [2019-11-20T09:02:40.791Z] [runtime-status]  {"httpsTrigger":{},"name":"helloWorld","entryPoint":"helloWorld"}
+[debug] [2019-11-20T09:02:40.791Z] [runtime-status] Running helloWorld in mode HTTPS {}
+[debug] [2019-11-20T09:02:40.800Z] {"socketPath":"/var/folders/ch/rr3t2f_j1j72l3_2781k0dgh0000gn/T/firebase_emulator_invocation_12391.sock"}
+[debug] [2019-11-20T09:02:40.802Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/ch/rr3t2f_j1j72l3_2781k0dgh0000gn/T/firebase_emulator_invocation_12391.sock"}
+[debug] [2019-11-20T09:02:40.809Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-20T09:02:40.817Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "helloWorld" in ~1s
+[debug] [2019-11-20T09:02:40.818Z] [worker-helloWorld-b6a335e6-2e9b-49ab-b3fb-510ee7466f2a]: IDLE
+[info] Shutting down...
+[debug] [2019-11-20T09:02:52.391Z] [worker-helloWorld-b6a335e6-2e9b-49ab-b3fb-510ee7466f2a]: exited
+[debug] [2019-11-20T09:02:52.391Z] [worker-helloWorld-b6a335e6-2e9b-49ab-b3fb-510ee7466f2a]: FINISHED
