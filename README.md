@@ -1,5 +1,43 @@
 # Guiseek
 
+# Guilherme Siquinelli, aprenda a ter sucesso na Workana
+### Compreender o funcionamento da plataforma e suas melhores práticas é chave para o seu desenvolvimento, leia atentamente o seguinte texto para realizar algumas perguntas a respeito.
+
+
+
+## Você receberá o pagamento através da Workana e está 100% garantido
+Na Workana te oferecemos a garantia de que você receberá seu dinheiro por um trabalho bem realizado. O cliente paga a totalidade antes de você começar a trabalhar e você recebe o dinheiro quando entregar o projeto contratado. Contamos com diferentes opções para que você saque o pagamento da forma que melhor lhe convém. Não precisa mais se preocupar em ficar ligando para que clientes te paguem.
+
+---
+
+
+## Não compartilhe informações de contato para não perder a garantia
+É importante que a comunicação seja mantida dentro da Workana. Desta forma, e diante de qualquer eventualidade, podemos te ajudar a resolver seu problema e você poderá contar com nosso respaldo. Não cumprir este ponto infringe as políticas do site. Você pode perder sua conta e todo o seu progresso.
+
+---
+
+## Respeite o cliente em todas as suas interações
+É muito importante que você seja cordial e mantenha o respeito. Ajude os clientes no processo de forma clara e com boa comunicação. Se um cliente não cumprir com nossas políticas, reporte o ocorrido.
+
+---
+
+## O compromisso com sua proposta deve ser total
+Leia os requerimentos de cada projeto com atenção e se não estiver seguro ou precisar de mais informações, envie uma mensagem ao cliente para acertar os últimos detalhes e sanar suas dúvidas. Não se comprometa com um trabalho que não pode ser realizado. Ajudá-los acabará ajudando a você mesmo.
+
+---
+
+## As qualificações positivas do cliente são a sua melhor estratégia de vendas
+Ao final do dia, o que vale na Workana é obter excelentes qualificações dos clientes. Sua melhor estratégia de vendas dentro da plataforma é o que vai permitir que você ganhe mais e melhores projetos, o que os outros disseram que você é bom no que você faz. Por isso, se você conquistar um projeto, procure realizar um excelente trabalho!
+
+Ah, e lembre-se de ler nossas políticas e de visitar nossa central de ajuda. :)
+
+
+
+
+
+
+
+
 This project was generated using [Nx](https://nx.dev).
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>

@@ -1,0 +1,30 @@
+{
+  "hosting": [
+    {
+      "target": "guiseek",
+      "public": "dist/apps/web-app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**/*.@(css|js)",
+          "destination": "/index.html"
+        },
+        {
+          "source": "**",
+          "function": "server"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "predeploy": [
+      "yarn lint functions",
+      "yarn build functions --prod"
+    ],
+    "source": "/"
+  }
+}

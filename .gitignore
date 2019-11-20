@@ -37,3 +37,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# private envs
+.env
+environments/backend/environment.prod.ts
+environments/frontend/environment.prod.ts
+libs/backend/core/src/lib/gui-seek-firebase-adminsdk-wctel-f23a2f31b3.json
