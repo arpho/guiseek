@@ -18,6 +18,25 @@
           "function": "server"
         }
       ]
+    },
+    {
+      "target": "terradamusica",
+      "public": "dist/apps/web-app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**/*.@(css|js)",
+          "destination": "/index.html"
+        },
+        {
+          "source": "**",
+          "function": "server"
+        }
+      ]
     }
   ],
   "functions": {

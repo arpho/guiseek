@@ -43,6 +43,9 @@
     },
     "web-admin": {
       "tags": []
+    },
+    "ui-svg-viewer": {
+      "tags": []
     }
   }
 }

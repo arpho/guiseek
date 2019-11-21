@@ -23,7 +23,8 @@
       "@guiseek/backend/core": ["libs/backend/core/src/index.ts"],
       "@guiseek/shared": ["libs/shared/src/index.ts"],
       "@guiseek/web-app/feature/shell": ["libs/web-app/feature/shell/src/index.ts"],
-      "@guiseek/web-app/feature/landing": ["libs/web-app/feature/landing/src/index.ts"]
+      "@guiseek/web-app/feature/landing": ["libs/web-app/feature/landing/src/index.ts"],
+      "@guiseek/ui/svg-viewer": ["libs/ui/svg-viewer/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

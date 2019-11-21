@@ -1,0 +1,25 @@
+{
+  "extends": "../../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      [
+        "guiseek",
+        "ui",
+        "svg"
+      ],
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      [
+        "guiseek",
+        "ui",
+        "svg"
+      ],
+      "kebab-case"
+    ]
+  }
+}

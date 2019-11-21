@@ -1,12 +1,20 @@
 {
   "projects": {
-    "default": "guiseek"
+    "default": "guiseek",
+    "terradamusica": "terradamusica"
   },
   "targets": {
     "gui-seek": {
       "hosting": {
         "guiseek": [
           "guiseek"
+        ]
+      }
+    },
+    "mundo-da-musica": {
+      "hosting": {
+        "terradamusica": [
+          "terradamusica"
         ]
       }
     }
