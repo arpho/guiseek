@@ -18,13 +18,17 @@
     "paths": {
       "@env/frontend": ["environments/frontend/environment.ts"],
       "@env/backend": ["environments/backend/environment.ts"],
+      "@env/musicland/frontend": ["environments/musicland/frontend/environment.ts"],
+      "@env/musicland/backend": ["environments/musicland/backend/environment.ts"],
       "@guiseek/backend/hosting": ["libs/backend/hosting/src/index.ts"],
       "@guiseek/backend/express": ["libs/backend/express/src/index.ts"],
       "@guiseek/backend/core": ["libs/backend/core/src/index.ts"],
       "@guiseek/shared": ["libs/shared/src/index.ts"],
       "@guiseek/web-app/feature/shell": ["libs/web-app/feature/shell/src/index.ts"],
       "@guiseek/web-app/feature/landing": ["libs/web-app/feature/landing/src/index.ts"],
-      "@guiseek/ui/svg-viewer": ["libs/ui/svg-viewer/src/index.ts"]
+      "@guiseek/ui/svg-viewer": ["libs/ui/svg-viewer/src/index.ts"],
+      "@guiseek/music-land/landing": ["libs/music-land/landing/src/index.ts"],
+      "@guiseek/music-land/onboarding": ["libs/music-land/onboarding/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

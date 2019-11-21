@@ -68,12 +68,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "6mb",
                   "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
+                  "maximumWarning": "16kb",
                   "maximumError": "10kb"
                 }
               ]
@@ -137,6 +137,19 @@
                 "styles": true
               }
             }
+          }
+        },
+        "build-server": {
+          "builder": "@angular-devkit/architect:concat",
+          "options": {
+            "targets": [
+              {
+                "target": "web-app:build"
+              },
+              {
+                "target": "web-app:server"
+              }
+            ]
           }
         }
       }
@@ -577,6 +590,240 @@
             "jestConfig": "libs/ui/svg-viewer/jest.config.js",
             "tsConfig": "libs/ui/svg-viewer/tsconfig.spec.json",
             "setupFile": "libs/ui/svg-viewer/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "music-land": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/music-land",
+      "sourceRoot": "apps/music-land/src",
+      "prefix": "music",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/music-land",
+            "index": "apps/music-land/src/index.html",
+            "main": "apps/music-land/src/main.ts",
+            "polyfills": "apps/music-land/src/polyfills.ts",
+            "tsConfig": "apps/music-land/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/music-land/src/favicon.ico",
+              "apps/music-land/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./libs/shared/src/assets/apps/music-land/",
+                "output": "./assets"
+              }
+            ],
+            "styles": [
+              "apps/music-land/src/styles.scss"
+            ],
+            "scripts": [
+              "libs/shared/src/assets/apps/music-land/js/vendor/jquery-3.3.1.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/bootstrap.bundle.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/perfect-scrollbar.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/slick.min.js",
+              "libs/shared/src/assets/apps/music-land/js/es5/scroll.min.js",
+              "libs/shared/src/assets/apps/music-land/js/es5/slick.script.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/aos.js",
+              "libs/shared/src/assets/apps/music-land/js/es5/script.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "environments/musicland/frontend/environment.ts",
+                  "with": "environments/musicland/frontend/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "music-land:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "music-land:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "music-land:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/music-land/tsconfig.app.json", "apps/music-land/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!apps/music-land/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/music-land/jest.config.js",
+            "tsConfig": "apps/music-land/tsconfig.spec.json",
+            "setupFile": "apps/music-land/src/test-setup.ts"
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/apps/music-land/server",
+            "main": "apps/music-land/src/main.server.ts",
+            "tsConfig": "apps/music-land/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "environments/musicland/frontend/environment.ts",
+                  "with": "environments/musicland/frontend/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
+          }
+        },
+        "build-server": {
+          "builder": "@angular-devkit/architect:concat",
+          "options": {
+            "targets": [
+              {
+                "target": "music-land:build"
+              },
+              {
+                "target": "music-land:server"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "music-land-e2e": {
+      "root": "apps/music-land-e2e",
+      "sourceRoot": "apps/music-land-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/music-land-e2e/cypress.json",
+            "tsConfig": "apps/music-land-e2e/tsconfig.e2e.json",
+            "devServerTarget": "music-land:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "music-land:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/music-land-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/music-land-e2e/**"]
+          }
+        }
+      }
+    },
+    "music-land-landing": {
+      "projectType": "library",
+      "root": "libs/music-land/landing",
+      "sourceRoot": "libs/music-land/landing/src",
+      "prefix": "music",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/music-land/landing/tsconfig.lib.json",
+              "libs/music-land/landing/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/music-land/landing/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/music-land/landing/jest.config.js",
+            "tsConfig": "libs/music-land/landing/tsconfig.spec.json",
+            "setupFile": "libs/music-land/landing/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "music-land-onboarding": {
+      "projectType": "library",
+      "root": "libs/music-land/onboarding",
+      "sourceRoot": "libs/music-land/onboarding/src",
+      "prefix": "guiseek",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/music-land/onboarding/tsconfig.lib.json",
+              "libs/music-land/onboarding/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/music-land/onboarding/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/music-land/onboarding/jest.config.js",
+            "tsConfig": "libs/music-land/onboarding/tsconfig.spec.json",
+            "setupFile": "libs/music-land/onboarding/src/test-setup.ts"
           }
         }
       },

@@ -21,7 +21,7 @@
     },
     {
       "target": "terradamusica",
-      "public": "dist/apps/web-app",
+      "public": "dist/apps/music-land",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -34,7 +34,7 @@
         },
         {
           "source": "**",
-          "function": "server"
+          "function": "musicLandServer"
         }
       ]
     }

@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/out-tsc-prerender",
+    /* node only understands commonjs for now*/
+    "module": "commonjs"
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ],
+  "files": [
+    "src/main.prerender.ts"
+  ],
+  /* Additional informations to bootstrap Angular */
+  "angularCompilerOptions": {
+    "entryModule": "./src/app/app.prerender.module#AppPrerenderModule"
+  }
+}
