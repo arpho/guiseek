@@ -46,6 +46,18 @@
     },
     "ui-svg-viewer": {
       "tags": []
+    },
+    "music-land-e2e": {
+      "tags": []
+    },
+    "music-land": {
+      "tags": []
+    },
+    "music-land-landing": {
+      "tags": []
+    },
+    "music-land-onboarding": {
+      "tags": []
     }
   }
 }

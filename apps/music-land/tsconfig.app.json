@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "types": []
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": [
+    "**/*.ts",
+    "../../libs/music-land/landing/src/index.ts",
+    "../../libs/music-land/onboarding/src/index.ts"
+  ],
+  "exclude": ["src/test-setup.ts", "**/*.spec.ts"]
+}
