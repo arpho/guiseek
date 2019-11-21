@@ -6,25 +6,9 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    // "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": true,
-    // "editor.cursorStyle": "line",
-    // "editor.fontSize": 16,
-    // "editor.fontFamily": "FiraCode-Retina, SourceCodePro-Regular, Menlo",
-    // "editor.fontLigatures": true,
-    // "editor.formatOnPaste": true,
-    // "editor.formatOnType": false,
-    // "editor.formatOnSave": true,
-    // "editor.letterSpacing": 0,
+
     "editor.lineHeight": 22,
-    // "editor.minimap.enabled": false,
-    // "editor.renderWhitespace": "none",
-    // "editor.tabCompletion": "on",
-    // "editor.tabSize": 2,
-    // "editor.wordWrap": "off",
-    // Terminal
-    // "terminal.integrated.fontFamily": "MesloLGS NF, 'SourceCodePro+Powerline+Awesome Regular', Source Code Pro for Powerline, monospace, Meslo LG M for Powerline",
-    // "terminal.integrated.fontSize": 16,
     // Workbench
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.colorCustomizations": {
@@ -42,8 +26,6 @@
       "statusBar.foreground": "#fff"
     },
     // File settings
-    // "files.autoSave": "afterDelay",
-    // "files.autoSaveDelay": 1000,
     "files.exclude": {
       "**/.git": true,
       "**/.DS_Store": true,
@@ -67,26 +49,6 @@
     "prettier.printWidth": 100,
     // REST client
     "rest-client.environmentVariables": {
-      //   "$shared": {
-      //     "client-id": "ngxapi",
-      //     "username": "sumo3",
-      //     "password": "demo",
-      //     "api-gateway-url": "http://localhost:8080"
-      //   },
-      //   "local": {
-      //     "oidc-issuer-url": "https://keycloak.kashmora.com/auth/realms/ngx",
-      //     "api-url": "http://localhost:3000"
-      //   },
-      //   "local-admin": {
-      //     "oidc-issuer-url": "https://keycloak.kashmora.com/auth/realms/ngx",
-      //     "api-url": "http://localhost:3000",
-      //     "username": "ngxadmin",
-      //     "password": "ngxadmin"
-      //   },
-      //   "production": {
-      //     "oidc-issuer-url": "https://keycloak.kashmora.com/auth/realms/ngx",
-      //     "api-url": "https://api.kashmora.com"
-      //   }
     }
   }
 
