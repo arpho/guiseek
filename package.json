@@ -6,6 +6,7 @@
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
+    "dev": "ng serve --open",
     "build": "ng build",
     "firebase:serve": "concurrently --kill-others \"yarn run build functions --watch\" \"firebase serve --only functions\"",
     "firebase:shell": "concurrently --kill-others \"yarn run build functions --watch\" \"firebase functions:shell\" --raw",

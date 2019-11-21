@@ -1,20 +1,80 @@
-<p>contact works!</p>
-<form [formGroup]="form">
-  <div class="fields">
-    <div class="field half">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" />
-    </div>
-    <div class="field half">
-      <label for="email">Email</label>
-      <input type="text" name="email" id="email" />
-    </div>
-    <div class="field">
-      <label for="message">Message</label>
-      <textarea name="message" id="message" rows="5"></textarea>
+<section id="three" class="wrapper style1 fade-up">
+  <div class="inner">
+    <header>
+      <h2>Contrate-me</h2>
+      <p>
+        Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies
+        erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem,
+        sit amet imperdiet est velit quis lorem.
+      </p>
+    </header>
+
+    <div class="split style1">
+      <section>
+        <form [formGroup]="form">
+          <div class="fields">
+            <div class="field half">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="field half">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="5"></textarea>
+            </div>
+          </div>
+          <ul class="actions">
+            <li><a href="" class="button submit">Send Message</a></li>
+          </ul>
+        </form>
+      </section>
+      <section>
+        <ul class="contact">
+          <li>
+            <h3>Local atual</h3>
+            <span
+              >Zona 04, Maringá<br />
+              Paraná, BR<br />
+            </span>
+          </li>
+          <li>
+            <h3>Email</h3>
+            <a href="#">guiseek@gmail.com</a>
+          </li>
+          <li>
+            <h3>Contato</h3>
+            <span>(44) 997 649 268</span>
+          </li>
+          <li>
+            <h3>Social</h3>
+            <ul class="icons">
+              <li>
+                <a href="https://www.npmjs.com/~guiseek" class="icon brands fa-twitter"
+                  ><span class="label">npm</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/guiseek" class="icon brands fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands fa-instagram"
+                  ><span class="label">Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon brands fa-linkedin-in"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </div>
   </div>
-  <ul class="actions">
-    <li><a href="" class="button submit">Send Message</a></li>
-  </ul>
-</form>
+</section>

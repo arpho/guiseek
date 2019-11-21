@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  header {
+    background-image: url('/assets/images/svgs/phone-icon.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+}
