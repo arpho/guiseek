@@ -1,8 +1,5 @@
 {
-  "rulesDirectory": [
-    "node_modules/@nrwl/workspace/src/tslint",
-    "node_modules/codelyzer"
-  ],
+  "rulesDirectory": ["node_modules/@nrwl/workspace/src/tslint", "node_modules/codelyzer"],
   "rules": {
     "no-unused-variable": true,
     "max-line-length": [
@@ -32,12 +29,7 @@
     "member-ordering": [
       true,
       {
-        "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
-        ]
+        "order": ["static-field", "instance-field", "static-method", "instance-method"]
       }
     ],
     "no-arg": true,

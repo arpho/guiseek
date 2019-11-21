@@ -31,7 +31,9 @@
               }
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/shared/src/styles/apps/web-app"]
+              "includePaths": [
+                "libs/shared/src/styles/apps/web-app"
+              ]
             },
             "styles": [
               "apps/web-app/src/styles.scss",
@@ -101,8 +103,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/web-app/tsconfig.app.json", "apps/web-app/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!apps/web-app/**"]
+            "tsConfig": [
+              "apps/web-app/tsconfig.app.json",
+              "apps/web-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/web-app/**"
+            ]
           }
         },
         "test": {
@@ -164,8 +172,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/web-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/web-app-e2e/**"]
+            "tsConfig": [
+              "apps/web-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/web-app-e2e/**"
+            ]
           }
         }
       }
@@ -183,7 +196,9 @@
             "outputPath": "dist/apps/functions",
             "main": "apps/functions/src/main.ts",
             "tsConfig": "apps/functions/tsconfig.app.json",
-            "assets": ["apps/functions/src/assets"]
+            "assets": [
+              "apps/functions/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -208,8 +223,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/functions/tsconfig.app.json", "apps/functions/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!apps/functions/**"]
+            "tsConfig": [
+              "apps/functions/tsconfig.app.json",
+              "apps/functions/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/functions/**"
+            ]
           }
         },
         "test": {
@@ -234,7 +255,10 @@
               "libs/backend/hosting/tsconfig.lib.json",
               "libs/backend/hosting/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/backend/hosting/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/backend/hosting/**"
+            ]
           }
         },
         "test": {
@@ -259,7 +283,10 @@
               "libs/backend/express/tsconfig.lib.json",
               "libs/backend/express/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/backend/express/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/backend/express/**"
+            ]
           }
         },
         "test": {
@@ -284,7 +311,9 @@
             "outputPath": "dist/apps/server",
             "main": "apps/server/src/main.ts",
             "tsConfig": "apps/server/tsconfig.app.json",
-            "assets": ["apps/server/src/assets"]
+            "assets": [
+              "apps/server/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -309,8 +338,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/server/tsconfig.app.json", "apps/server/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!apps/server/**"]
+            "tsConfig": [
+              "apps/server/tsconfig.app.json",
+              "apps/server/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/server/**"
+            ]
           }
         },
         "test": {
@@ -335,7 +370,10 @@
               "libs/backend/core/tsconfig.lib.json",
               "libs/backend/core/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/backend/core/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/backend/core/**"
+            ]
           }
         },
         "test": {
@@ -356,8 +394,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/shared/tsconfig.lib.json", "libs/shared/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!libs/shared/**"]
+            "tsConfig": [
+              "libs/shared/tsconfig.lib.json",
+              "libs/shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/**"
+            ]
           }
         },
         "test": {
@@ -388,7 +432,10 @@
               "libs/web-app/feature/shell/tsconfig.lib.json",
               "libs/web-app/feature/shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/web-app/feature/shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/web-app/feature/shell/**"
+            ]
           }
         },
         "test": {
@@ -419,7 +466,10 @@
               "libs/web-app/feature/landing/tsconfig.lib.json",
               "libs/web-app/feature/landing/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/web-app/feature/landing/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/web-app/feature/landing/**"
+            ]
           }
         },
         "test": {
@@ -434,6 +484,140 @@
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "scss"
+        }
+      }
+    },
+    "web-admin": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/web-admin",
+      "sourceRoot": "apps/web-admin/src",
+      "prefix": "web",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/web-admin",
+            "index": "apps/web-admin/src/index.html",
+            "main": "apps/web-admin/src/main.ts",
+            "polyfills": "apps/web-admin/src/polyfills.ts",
+            "tsConfig": "apps/web-admin/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/web-admin/src/favicon.ico",
+              "apps/web-admin/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "apps/web-admin/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/web-admin/src/environments/environment.ts",
+                  "with": "apps/web-admin/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "web-admin:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "web-admin:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "web-admin:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/web-admin/tsconfig.app.json",
+              "apps/web-admin/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/web-admin/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/web-admin/jest.config.js",
+            "tsConfig": "apps/web-admin/tsconfig.spec.json",
+            "setupFile": "apps/web-admin/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "web-admin-e2e": {
+      "root": "apps/web-admin-e2e",
+      "sourceRoot": "apps/web-admin-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/web-admin-e2e/cypress.json",
+            "tsConfig": "apps/web-admin-e2e/tsconfig.e2e.json",
+            "devServerTarget": "web-admin:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "web-admin:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/web-admin-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/web-admin-e2e/**"
+            ]
+          }
         }
       }
     }

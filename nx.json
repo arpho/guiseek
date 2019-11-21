@@ -37,6 +37,12 @@
     },
     "web-app-feature-landing": {
       "tags": []
+    },
+    "web-admin-e2e": {
+      "tags": []
+    },
+    "web-admin": {
+      "tags": []
     }
   }
 }
