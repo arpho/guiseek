@@ -11,9 +11,8 @@
     "firebase:serve": "concurrently --kill-others \"yarn run build functions --watch\" \"firebase serve --only functions\"",
     "firebase:shell": "concurrently --kill-others \"yarn run build functions --watch\" \"firebase functions:shell\" --raw",
     "firebase:deploy": "firebase deploy",
-    "ml:build": "ng build music-land --configuration=production && ng run music-land:server --configuration=production",
-    "postbuild": "npm run render",
-    "render": "ts-node libs/backend/hosting/src/lib/music-land.ts",
+    "wa:build": "ng run web-app:build-server",
+    "ml:build": "ng run music-land:build-server",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
@@ -61,7 +60,7 @@
     "zone.js": "^0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.3",
+    "@angular-devkit/build-angular": "0.803.5",
     "@angular/cli": "8.3.3",
     "@angular/compiler-cli": "^8.2.0",
     "@angular/language-service": "^8.2.0",

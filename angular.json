@@ -68,12 +68,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "6mb",
                   "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
+                  "maximumWarning": "16kb",
                   "maximumError": "10kb"
                 }
               ]
@@ -137,6 +137,19 @@
                 "styles": true
               }
             }
+          }
+        },
+        "build-server": {
+          "builder": "@angular-devkit/architect:concat",
+          "options": {
+            "targets": [
+              {
+                "target": "web-app:build"
+              },
+              {
+                "target": "web-app:server"
+              }
+            ]
           }
         }
       }
@@ -606,9 +619,28 @@
             "polyfills": "apps/music-land/src/polyfills.ts",
             "tsConfig": "apps/music-land/tsconfig.app.json",
             "aot": false,
-            "assets": ["apps/music-land/src/favicon.ico", "apps/music-land/src/assets"],
-            "styles": ["apps/music-land/src/styles.scss"],
-            "scripts": []
+            "assets": [
+              "apps/music-land/src/favicon.ico",
+              "apps/music-land/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./libs/shared/src/assets/apps/music-land/",
+                "output": "./assets"
+              }
+            ],
+            "styles": [
+              "apps/music-land/src/styles.scss"
+            ],
+            "scripts": [
+              "libs/shared/src/assets/apps/music-land/js/vendor/jquery-3.3.1.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/bootstrap.bundle.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/perfect-scrollbar.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/slick.min.js",
+              "libs/shared/src/assets/apps/music-land/js/es5/scroll.min.js",
+              "libs/shared/src/assets/apps/music-land/js/es5/slick.script.min.js",
+              "libs/shared/src/assets/apps/music-land/js/vendor/aos.js",
+              "libs/shared/src/assets/apps/music-land/js/es5/script.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -695,6 +727,19 @@
                 "styles": true
               }
             }
+          }
+        },
+        "build-server": {
+          "builder": "@angular-devkit/architect:concat",
+          "options": {
+            "targets": [
+              {
+                "target": "music-land:build"
+              },
+              {
+                "target": "music-land:server"
+              }
+            ]
           }
         }
       }

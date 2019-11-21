@@ -1,0 +1,45 @@
+.music-solutions {
+  font-size: 24px;
+}
+.globe {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 100px;
+  left: 180px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100px;
+  opacity: 0.4;
+}
+.globe svg {
+  -webkit-animation: rotation 10s linear 0s infinite;
+  animation: rotation 10s linear 0s infinite;
+}
+.globe svg path {
+  stroke: #fff;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  from {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  from {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
