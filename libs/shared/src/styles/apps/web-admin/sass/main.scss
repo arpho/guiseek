@@ -1,0 +1,10 @@
+.mat-form-field {
+  width: 100%;
+  min-width: 10px;
+}
+.mat-card {
+  &.container {
+    padding: 0;
+    overflow: hidden;
+  }
+}

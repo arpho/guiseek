@@ -58,6 +58,15 @@
     },
     "music-land-onboarding": {
       "tags": []
+    },
+    "models": {
+      "tags": []
+    },
+    "web-admin-feature-auth": {
+      "tags": []
+    },
+    "web-admin-data-access": {
+      "tags": []
     }
   }
 }

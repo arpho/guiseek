@@ -28,7 +28,10 @@
       "@guiseek/web-app/feature/landing": ["libs/web-app/feature/landing/src/index.ts"],
       "@guiseek/ui/svg-viewer": ["libs/ui/svg-viewer/src/index.ts"],
       "@guiseek/music-land/landing": ["libs/music-land/landing/src/index.ts"],
-      "@guiseek/music-land/onboarding": ["libs/music-land/onboarding/src/index.ts"]
+      "@guiseek/music-land/onboarding": ["libs/music-land/onboarding/src/index.ts"],
+      "@guiseek/models": ["libs/models/src/index.ts"],
+      "@guiseek/web-admin/feature/auth": ["libs/web-admin/feature/auth/src/index.ts"],
+      "@guiseek/web-admin/data-access": ["libs/web-admin/data-access/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
