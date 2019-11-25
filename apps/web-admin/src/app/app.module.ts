@@ -26,6 +26,13 @@ import { AppComponent } from './app.component';
               module => module.WebAdminFeatureAuthModule,
             ),
         },
+        {
+          path: 'barcode',
+          loadChildren: () =>
+            import('@guiseek/web-admin/feature/barcode').then(
+              module => module.WebAdminFeatureBarcodeModule,
+            ),
+        },
       ],
       { initialNavigation: 'enabled' },
     ),

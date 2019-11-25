@@ -67,6 +67,12 @@
     },
     "web-admin-data-access": {
       "tags": []
+    },
+    "npm-barcode-viewer": {
+      "tags": []
+    },
+    "web-admin-feature-barcode": {
+      "tags": []
     }
   }
 }

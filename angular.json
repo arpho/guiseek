@@ -920,6 +920,75 @@
           "styleext": "scss"
         }
       }
+    },
+    "npm-barcode-viewer": {
+      "projectType": "library",
+      "root": "libs/npm/barcode-viewer",
+      "sourceRoot": "libs/npm/barcode-viewer/src",
+      "prefix": "svg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/npm/barcode-viewer/tsconfig.lib.json",
+            "project": "libs/npm/barcode-viewer/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/npm/barcode-viewer/tsconfig.lib.json",
+              "libs/npm/barcode-viewer/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/npm/barcode-viewer/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/npm/barcode-viewer/jest.config.js",
+            "tsConfig": "libs/npm/barcode-viewer/tsconfig.spec.json",
+            "setupFile": "libs/npm/barcode-viewer/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "web-admin-feature-barcode": {
+      "projectType": "library",
+      "root": "libs/web-admin/feature/barcode",
+      "sourceRoot": "libs/web-admin/feature/barcode/src",
+      "prefix": "guiseek",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/web-admin/feature/barcode/tsconfig.lib.json",
+              "libs/web-admin/feature/barcode/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/web-admin/feature/barcode/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/web-admin/feature/barcode/jest.config.js",
+            "tsConfig": "libs/web-admin/feature/barcode/tsconfig.spec.json",
+            "setupFile": "libs/web-admin/feature/barcode/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {
