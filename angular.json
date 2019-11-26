@@ -921,7 +921,7 @@
         }
       }
     },
-    "npm-barcode-viewer": {
+    "barcode-viewer": {
       "projectType": "library",
       "root": "libs/npm/barcode-viewer",
       "sourceRoot": "libs/npm/barcode-viewer/src",
@@ -981,6 +981,44 @@
             "jestConfig": "libs/web-admin/feature/barcode/jest.config.js",
             "tsConfig": "libs/web-admin/feature/barcode/tsconfig.spec.json",
             "setupFile": "libs/web-admin/feature/barcode/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ngx-barcode-reader": {
+      "projectType": "library",
+      "root": "libs/npm/ngx-barcode-reader",
+      "sourceRoot": "libs/npm/ngx-barcode-reader/src",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/npm/ngx-barcode-reader/tsconfig.lib.json",
+            "project": "libs/npm/ngx-barcode-reader/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/npm/ngx-barcode-reader/tsconfig.lib.json",
+              "libs/npm/ngx-barcode-reader/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/npm/ngx-barcode-reader/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/npm/ngx-barcode-reader/jest.config.js",
+            "tsConfig": "libs/npm/ngx-barcode-reader/tsconfig.spec.json",
+            "setupFile": "libs/npm/ngx-barcode-reader/src/test-setup.ts"
           }
         }
       },

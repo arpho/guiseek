@@ -68,10 +68,13 @@
     "web-admin-data-access": {
       "tags": []
     },
-    "npm-barcode-viewer": {
+    "barcode-viewer": {
       "tags": []
     },
     "web-admin-feature-barcode": {
+      "tags": []
+    },
+    "ngx-barcode-reader": {
       "tags": []
     }
   }

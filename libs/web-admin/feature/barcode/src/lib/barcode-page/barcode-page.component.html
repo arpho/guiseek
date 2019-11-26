@@ -13,3 +13,15 @@
 <mat-card *ngIf="submitted">
   <svg-barcode-viewer [value]="code.value" format="codabar"></svg-barcode-viewer>
 </mat-card>
+
+<mat-card>
+  <button type="button" mat-flat-button (click)="toggleReader()">
+    Leitor
+  </button>
+</mat-card>
+<mat-card class="barcode-container">
+  <div class="cover">
+    <img src="assets/images/barcode-scan.svg" alt="" />
+  </div>
+  <ngx-barcode-reader type="codabar" (valueChanges)="onValueChanges($event)"></ngx-barcode-reader>
+</mat-card>

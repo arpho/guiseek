@@ -1,9 +1,9 @@
 {
-  "name": "@guiseek/barcode-viewer",
+  "name": "@guiseek/ngx-barcode-reader",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
-    "jsbarcode": "^3.11.0"
+    "quagga": "^0.12.1"
   }
 }

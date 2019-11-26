@@ -33,7 +33,8 @@
       "@guiseek/web-admin/feature/auth": ["libs/web-admin/feature/auth/src/index.ts"],
       "@guiseek/web-admin/data-access": ["libs/web-admin/data-access/src/index.ts"],
       "@guiseek/npm/barcode-viewer": ["libs/npm/barcode-viewer/src/index.ts"],
-      "@guiseek/web-admin/feature/barcode": ["libs/web-admin/feature/barcode/src/index.ts"]
+      "@guiseek/web-admin/feature/barcode": ["libs/web-admin/feature/barcode/src/index.ts"],
+      "@guiseek/npm/ngx-barcode-reader": ["libs/npm/ngx-barcode-reader/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
