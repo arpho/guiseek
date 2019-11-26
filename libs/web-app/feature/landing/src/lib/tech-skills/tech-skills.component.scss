@@ -1,0 +1,55 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+svg {
+  fill: white;
+  width: 50%;
+
+  transform-style: preserve-3d;
+
+  & > g {
+    box-shadow: 0 1rem 3rem rgba(black, 0.2);
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background: rgba(white, 0.2);
+    filter: blur(1px);
+  }
+
+  &:before {
+    transform: translateZ(1rem);
+    $shadows: ();
+    @for $i from 1 through 50 {
+      $shadows: append($shadows, random(90) * 1vmin random(50) * 1vmin 0 white, comma);
+    }
+    box-shadow: $shadows;
+  }
+
+  &:after {
+    height: 3px;
+    width: 3px;
+    transform: translateZ(2rem);
+    $shadows: ();
+    @for $i from 1 through 50 {
+      $shadows: append($shadows, random(90) * 1vmin random(50) * 1vmin 0 white, comma);
+    }
+    box-shadow: $shadows;
+  }
+}

@@ -18,25 +18,6 @@
           "function": "server"
         }
       ]
-    },
-    {
-      "target": "terradamusica",
-      "public": "dist/apps/music-land",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**/*.@(css|js)",
-          "destination": "/index.html"
-        },
-        {
-          "source": "**",
-          "function": "musicLandServer"
-        }
-      ]
     }
   ],
   "functions": {

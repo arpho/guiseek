@@ -10,6 +10,7 @@ import { OpenSourceComponent } from './open-source/open-source.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ProjectComponent } from './project/project.component';
 import { TalksComponent } from './talks/talks.component';
+import { TechSkillsComponent } from './tech-skills/tech-skills.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,7 @@ import { TalksComponent } from './talks/talks.component';
         component: LandingPageComponent
       },
       {
-        path: 'contato',
+        path: 'contact',
         component: ContactComponent
       },
       {
@@ -48,6 +49,10 @@ import { TalksComponent } from './talks/talks.component';
       {
         path: 'photos',
         component: PhotosComponent
+      },
+      {
+        path: 'skills',
+        component: TechSkillsComponent
       }
     ]),
   ],
@@ -58,7 +63,8 @@ import { TalksComponent } from './talks/talks.component';
     OpenSourceComponent,
     TalksComponent,
     EventsComponent,
-    PhotosComponent
+    PhotosComponent,
+    TechSkillsComponent
   ],
   exports: [ContactComponent]
 })
