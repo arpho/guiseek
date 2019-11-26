@@ -1,0 +1,20 @@
+<section>
+  <h2 class="major">Algumas fotos do networking</h2>
+  <!-- <h3>Fit</h3> -->
+  <div class="box alt">
+    <div class="row gtr-uniform">
+      <div class="col-12">
+        <span class="image fit">
+          <img src="assets/images/networking/beijo-maujor-guiseek.jpg" alt="" />
+          <span class="caption">Beijo do maujor &lt;3 </span>
+        </span>
+      </div>
+      <div class="col-4" *ngFor="let photo of photos">
+        <span class="image fit">
+          <img [src]="'assets/images/networking/' + photo.src" [attr.alt]="photo.caption" />
+          <span class="caption">{{photo.caption}}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

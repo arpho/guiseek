@@ -1,24 +1,19 @@
-import { Injectable, Inject } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { SEO_CONFIG } from '../config/seo.config';
 import { SeoConfig } from '../interfaces/seo-config.interface';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SeoService {
   constructor(
     private meta: Meta,
     private titleService: Title,
-    @Inject(SEO_CONFIG) private seoConfig
-  ) {
-    console.log('seoConfig: ', seoConfig)
-  }
+    @Inject(SEO_CONFIG) private seoConfig: SeoConfig
+  ) { }
 
   generateTags({ tags }: SeoConfig) {
-    console.log('tags: ', tags)
     // default values
-    tags = { ...tags }
+    tags = { ...this.seoConfig, ...tags }
 
     // Set a title
     this.titleService.setTitle(tags.title);

@@ -4,9 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@guiseek/shared';
 import { ContactComponent } from './contact/contact.component';
+import { EventsComponent } from './events/events.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { OpenSourceComponent } from './open-source/open-source.component';
+import { PhotosComponent } from './photos/photos.component';
 import { ProjectComponent } from './project/project.component';
+import { TalksComponent } from './talks/talks.component';
 
 @NgModule({
   imports: [
@@ -33,10 +36,30 @@ import { ProjectComponent } from './project/project.component';
       {
         path: 'open-source',
         component: OpenSourceComponent
+      },
+      {
+        path: 'talks',
+        component: TalksComponent
+      },
+      {
+        path: 'networking',
+        component: EventsComponent
+      },
+      {
+        path: 'photos',
+        component: PhotosComponent
       }
     ]),
   ],
-  declarations: [LandingPageComponent, ContactComponent, ProjectComponent, OpenSourceComponent],
+  declarations: [
+    LandingPageComponent,
+    ContactComponent,
+    ProjectComponent,
+    OpenSourceComponent,
+    TalksComponent,
+    EventsComponent,
+    PhotosComponent
+  ],
   exports: [ContactComponent]
 })
 export class WebAppFeatureLandingModule { }

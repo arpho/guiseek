@@ -1,6 +1,8 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import * as JsBarcode from 'jsbarcode';
 
+const barcode = JsBarcode;
+
 const styles = [`:host { width: 100%; display: flex; flex-flow: row; justify-content: center; }`];
 const template = `<div #bcElement></div>`;
 
@@ -21,7 +23,8 @@ export class BarcodeViewerComponent implements OnInit {
     try {
       element = this.renderer.createElement('svg', 'svg');
       // JsBarcode(element).codabar('123456').
-      JsBarcode(element, this.value, { format: this.format })
+      // JsBarcode(element, this.value, { format: this.format })
+      barcode(element, this.value, { format: this.format })
       this.renderer.appendChild(this.bcElement.nativeElement, element);
     } catch (err) {
       console.log('bla: ', err)

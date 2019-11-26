@@ -1,9 +1,32 @@
 {
   "name": "@guiseek/ngx-barcode-reader",
   "version": "0.0.1",
+  "author": {
+    "name": "Guilherme Siquinelli",
+    "email": "guiseek@gmail.com",
+    "url": "https://guiseek.web.app/"
+  },
+  "description": "Angular Barcode Reader",
+  "keywords": [
+    "angular",
+    "ngx",
+    "barcode",
+    "reader",
+    "codebar",
+    "quagga",
+    "scan",
+    "scanner"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guiseek/guiseek.git"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  },
+  "dependencies": {
     "quagga": "^0.12.1"
-  }
+  },
+  "license": "MIT"
 }

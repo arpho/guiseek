@@ -1,64 +1,51 @@
-<p>open-source works!</p>
 <section id="two" class="wrapper style3 fade-up">
   <div class="inner">
-    <h2>What we do</h2>
+    <!-- <img class="npm" src="assets/images/svgs/npm.svg" alt=""> -->
+    <h2>Open Source</h2>
     <p>
-      Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies
-      erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit
-      amet imperdiet est velit quis lorem.
+        I often compare open source to science. To where science took this whole notion of developing ideas in the open and improving on other peoples' ideas and making it into what science is today and the incredible advances that we have had. And I compare that to witchcraft and alchemy, where openness was something you didn't do.
     </p>
+    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="npm"
+      class="svg-inline--fa fa-npm fa-w-18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+      <path fill="currentColor"
+        d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z">
+      </path>
+    </svg>
     <div class="features">
-      <section>
+      <section *ngFor="let npm of npm$ | async">
         <span class="icon solid major fa-code"></span>
-        <h3>Lorem ipsum amet</h3>
+        <h3>{{npm.package.name}}</h3>
+        <p>{{npm.package.description}}</p>
+        <code class="version">{{npm.package.version}}</code>
+        <div class="keywords">
+          <code *ngFor="let keyword of npm.package.keywords">{{keyword}}</code>
+        </div>
+        <!-- <pre>{{npm | json}}</pre>
         <p>
+
           Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
           ultricies erat dapibus.
-        </p>
-      </section>
-      <section>
-        <span class="icon solid major fa-lock"></span>
-        <h3>Aliquam sed nullam</h3>
-        <p>
-          Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-          ultricies erat dapibus.
-        </p>
-      </section>
-      <section>
-        <span class="icon solid major fa-cog"></span>
-        <h3>Sed erat ullam corper</h3>
-        <p>
-          Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-          ultricies erat dapibus.
-        </p>
-      </section>
-      <section>
-        <span class="icon solid major fa-desktop"></span>
-        <h3>Veroeros quis lorem</h3>
-        <p>
-          Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-          ultricies erat dapibus.
-        </p>
-      </section>
-      <section>
-        <span class="icon solid major fa-link"></span>
-        <h3>Urna quis bibendum</h3>
-        <p>
-          Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-          ultricies erat dapibus.
-        </p>
-      </section>
-      <section>
-        <span class="icon major fa-gem"></span>
-        <h3>Aliquam urna dapibus</h3>
-        <p>
-          Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed
-          ultricies erat dapibus.
-        </p>
+        </p> -->
       </section>
     </div>
     <ul class="actions">
       <li><a href="generic.html" class="button">Learn more</a></li>
     </ul>
+
+    <svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github"
+      class="svg-inline--fa fa-github fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+      <path fill="currentColor"
+        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+      </path>
+    </svg>
+    <div class="features">
+      <section *ngFor="let github of github$ | async">
+        <span class="icon solid major fa-code"></span>
+        <h3>{{github.full_name}}</h3>
+        <p>{{github.description}}</p>
+        <code class="version">{{github.default_branch}}</code>
+        <!-- <pre>{{github | json}}</pre> -->
+      </section>
+    </div>
   </div>
 </section>

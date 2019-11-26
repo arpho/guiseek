@@ -1,9 +1,31 @@
 {
   "name": "@guiseek/barcode-viewer",
   "version": "0.0.1",
+  "author": {
+    "name": "Guilherme Siquinelli",
+    "email": "guiseek@gmail.com",
+    "url": "https://guiseek.js.org/"
+  },
+  "description": "Angular Barcode Viewer",
+  "keywords": [
+    "angular",
+    "ngx",
+    "barcode",
+    "viewer",
+    "codebar",
+    "svg",
+    "jsbarcode"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guiseek/guiseek.git"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  },
+  "dependencies": {
     "jsbarcode": "^3.11.0"
-  }
+  },
+  "license": "MIT"
 }

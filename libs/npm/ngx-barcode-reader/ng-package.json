@@ -3,5 +3,9 @@
   "dest": "../../../dist/libs/npm/ngx-barcode-reader",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "tslib",
+    "."
+  ]
 }

@@ -1,0 +1,15 @@
+<section id="one" class="wrapper style1 spotlights">
+
+  <div class="inner">
+    <h1 class="major">Eventos</h1>
+  </div>
+
+  <section class="" *ngFor="let event of events">
+    <div class="content">
+      <div class="inner">
+        <h2>{{event.name}}</h2>
+        <p>{{event.year}}, {{event.place}}</p>
+      </div>
+    </div>
+  </section>
+</section>

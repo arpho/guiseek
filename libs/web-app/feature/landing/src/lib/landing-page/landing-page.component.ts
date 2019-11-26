@@ -15,7 +15,20 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() {
     this.seoService.generateTags({
-      tags: { title: 'Landing' }
+      tags: {
+        title: 'Gui Seek',
+        description: `
+          guilherme siquinelli,
+          gui seek,
+          desenvolvedor web,
+          angular,
+          pwa,
+          ionic,
+          javascript,
+          typescript, web
+        `,
+        image: '/assets/images/guiseek-devparana.jpg',
+      }
     })
   }
 

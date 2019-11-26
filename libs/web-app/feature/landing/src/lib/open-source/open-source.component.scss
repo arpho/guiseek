@@ -1,0 +1,28 @@
+:host {
+  .fa-npm, .fa-github {
+    height: 100px;
+  }
+  section {
+    position: relative;
+    code.version {
+      position: absolute;
+      top: 8px;
+      right: 2px;
+      line-height: 1.2;
+      padding: 3px 6px 2px;
+    }
+    .keywords {
+      display: flex;
+      flex-flow: wrap;
+      & > code {
+        margin-bottom: 8px;
+        padding: 1px 6px 0 8px;
+      }
+    }
+  }
+  // section > h3 {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  // }
+}

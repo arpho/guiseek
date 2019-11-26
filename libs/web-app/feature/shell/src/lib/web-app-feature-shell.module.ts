@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '@guiseek/shared';
 import { ShellComponent } from './shell/shell.component';
 
 @NgModule({
   imports: [
     CommonModule,
-
+    SharedModule.forRoot(),
     RouterModule.forChild([
       {
         path: '',
@@ -30,4 +31,4 @@ import { ShellComponent } from './shell/shell.component';
   ],
   declarations: [ShellComponent],
 })
-export class WebAppFeatureShellModule {}
+export class WebAppFeatureShellModule { }

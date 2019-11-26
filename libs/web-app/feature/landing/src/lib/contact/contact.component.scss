@@ -2,10 +2,37 @@
   display: flex;
   flex-flow: column;
   height: 100%;
+  blockquote {
+    font-size: 2rem;
+    & > p {
+      margin-bottom: 0;
+    }
+  }
+  .inner {
+    position: relative;
+
+    &::after {
+      content: "";
+      background: url("/assets/images/svgs/mail-icon.svg");
+      opacity: 0.1;
+      top: -200px;
+      left: 0;
+      bottom: 0;
+      right: -200px;
+      position: absolute;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-position: top right;
+    }
+    section {
+      z-index: 2;
+    }
+  }
 
   header {
-    background-image: url('/assets/images/svgs/phone-icon.svg');
-    background-position: top right;
-    background-repeat: no-repeat;
+    // background-image: url('/assets/images/svgs/phone-icon.svg');
+    // background-image: url('/assets/apps/web-app/images/svgs/mail-icon.svg');
+    // background-position: top right;
+    // background-repeat: no-repeat;
   }
 }
