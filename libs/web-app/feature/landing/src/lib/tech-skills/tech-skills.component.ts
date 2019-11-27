@@ -18,7 +18,7 @@ export class TechSkillsComponent implements OnInit {
 
     // const docElm = document.documentElement;
     const docElm = this.elementRef.nativeElement
-    const cardElm = docElm.querySelector('svg')
+    const cardElm = docElm.querySelectorAll('svg')
     // const titleElm = document.querySelector('#title');
 
     const { clientWidth, clientHeight } = docElm;
@@ -49,9 +49,14 @@ export class TechSkillsComponent implements OnInit {
       const rotY = (pos.x / clientWidth * 50) - 25;
 
       console.log('pos: ', pos)
-      cardElm.style.cssText = `
-        transform: rotateX(${rotX}deg) rotateY(${rotY}deg);
-      `;
+      cardElm.forEach((ce) => {
+        ce.style.cssText = `
+          transform: rotateX(${rotX}deg) rotateY(${rotY}deg);
+        `;
+      })
+      // cardElm.style.cssText = `
+      //   transform: rotateX(${rotX}deg) rotateY(${rotY}deg);
+      // `;
     });
   }
 
