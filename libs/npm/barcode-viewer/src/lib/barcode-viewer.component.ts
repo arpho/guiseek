@@ -22,12 +22,9 @@ export class BarcodeViewerComponent implements OnInit {
     let element: Element;
     try {
       element = this.renderer.createElement('svg', 'svg');
-      // JsBarcode(element).codabar('123456').
-      // JsBarcode(element, this.value, { format: this.format })
       barcode(element, this.value, { format: this.format })
       this.renderer.appendChild(this.bcElement.nativeElement, element);
     } catch (err) {
-      console.log('bla: ', err)
       element = this.renderer.createText(err);
       this.renderer.appendChild(this.bcElement.nativeElement, element);
     }
